@@ -1,3 +1,5 @@
-# sn2b
+# sn2b.github.io
 
-Hi, my name is Tim and I am a support engineer at GitHub.
+Personal site for Tim — Enterprise Support Engineer at GitHub.
+
+Built with pure HTML/CSS/JS. No dependencies.
