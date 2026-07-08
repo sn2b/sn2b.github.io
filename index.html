@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tim — Support Engineer @ GitHub</title>
+    <title>Tim Nitschai — Engineer @ GitHub</title>
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -318,6 +318,15 @@
             position: relative;
         }
 
+        .card p code {
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
+            font-size: 0.82em;
+            color: var(--accent);
+            background: var(--accent-glow);
+            padding: 0.1em 0.4em;
+            border-radius: 5px;
+        }
+
         /* ── Toolkit ── */
         .toolkit {
             display: flex;
@@ -476,7 +485,8 @@
     <div class="logo">sn2b</div>
     <ul class="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#journey">Journey</a></li>
         <li><a href="#toolkit">Toolkit</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
@@ -486,7 +496,7 @@
 <section class="hero">
     <div class="badge"><span class="dot"></span> Available for collaboration</div>
     <h1>Hey, I'm <span class="gradient">Tim</span>.</h1>
-    <p>Support Engineer at GitHub — helping developers ship better software by solving the problems that slow them down.</p>
+    <p>Engineer at GitHub handling deepest-tier (L3) escalations. I contribute production code to the Rails monolith, build and deploy internal tooling, and turn customer pain into shipped fixes.</p>
     <div class="hero-actions">
         <a href="https://github.com/sn2b" class="btn btn-primary">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12Z"/></svg>
@@ -500,51 +510,90 @@
 <section id="about" class="reveal">
     <p class="section-label">About</p>
     <h2>What I Do</h2>
-    <p>I thrive at the intersection of engineering and empathy — debugging complex technical issues while making sure developers feel heard and unblocked.</p>
+    <p>Engineer with an MSc in Physics and a systems-debugging background. I ship production code, build internal tooling, and reason about security, accessibility, and rollout risk — using AI as a force multiplier, but keeping the judgment my own.</p>
     <div class="card-grid">
         <div class="card">
-            <div class="card-icon">🔍</div>
-            <h3>Troubleshooting</h3>
-            <p>Diving deep into logs, configs, and edge cases to find the root cause — fast.</p>
+            <div class="card-icon">🚀</div>
+            <h3>Production Code</h3>
+            <p>Contributing to <code>github/github</code>, GitHub's Rails monolith — Ruby, ERB, view-model refactors, and test coverage.</p>
         </div>
         <div class="card">
-            <div class="card-icon">🤝</div>
-            <h3>Developer Advocacy</h3>
-            <p>Translating customer pain into actionable feedback for engineering teams.</p>
+            <div class="card-icon">🔍</div>
+            <h3>Deep Debugging</h3>
+            <p>Resolving L3 escalations, including production-down debugging of GitHub Enterprise Server.</p>
         </div>
         <div class="card">
             <div class="card-icon">⚡</div>
-            <h3>Automation</h3>
-            <p>Building internal tools and workflows to make support more efficient.</p>
+            <h3>Internal Tooling</h3>
+            <p>Building and deploying full-stack dashboards and CI/CD automation that scale across the org.</p>
         </div>
         <div class="card">
-            <div class="card-icon">📚</div>
-            <h3>Documentation</h3>
-            <p>Crafting clear guides and runbooks so solutions scale beyond a single ticket.</p>
+            <div class="card-icon">🛡️</div>
+            <h3>Security & Accessibility</h3>
+            <p>Driving remediation of production vulnerabilities and building accessible, ARIA-correct UI.</p>
         </div>
     </div>
 </section>
 
-<!-- ── Work ── -->
-<section id="work" class="reveal">
+<!-- ── Selected Work ── -->
+<section id="projects" class="reveal">
+    <p class="section-label">Selected Work</p>
+    <h2>Things I've Shipped</h2>
+    <p>A sample of engineering work — every claim traceable to a real, verifiable link.</p>
+    <div class="card-grid">
+        <div class="card">
+            <div class="card-icon">🧭</div>
+            <h3>Accessible Permission Consent UI</h3>
+            <p>Authored a production-targeted PR to <code>github/github</code> restructuring the GitHub App permission-consent screen into accessible, resource-grouped sections — view-model refactor, ERB, ARIA semantics, and a feature-flag rollout plan.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🛡️</div>
+            <h3>Security Remediation</h3>
+            <p>Identified and drove remediation of a production vulnerability allowing unauthorized access via private GitHub Apps — protecting hundreds of enterprise customers.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">📊</div>
+            <h3>Community Dashboard</h3>
+            <p>Built and deployed a full-stack internal community dashboard (GitHub Pages + OpenAI API) used within the support org.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🔑</div>
+            <h3>GraphQL Scope Mapper</h3>
+            <p>Developing an internal tool that maps GraphQL endpoints to their required permission scopes, cutting investigation time for engineers.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">📈</div>
+            <h3>Monolith Contributions</h3>
+            <p>Merged PRs to <code>github/github</code> improving the Copilot metrics schema and code-scanning API descriptions.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">⚙️</div>
+            <h3>CI/CD Automation</h3>
+            <p>Implemented a docs-update automation workflow and authored additional CI/workflow automation for support tooling.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ── Journey ── -->
+<section id="journey" class="reveal">
     <p class="section-label">Journey</p>
     <h2>Where I've Been</h2>
     <p>A snapshot of the path that brought me here.</p>
     <div class="timeline">
         <div class="timeline-item">
-            <div class="timeline-date">Now</div>
-            <h3>Support Engineer — GitHub</h3>
-            <p>Helping enterprise customers get the most out of the world's largest development platform.</p>
+            <div class="timeline-date">10/2022 — Now</div>
+            <h3>Support Engineer (L3) — GitHub</h3>
+            <p>Resolving deepest-tier engineering escalations, contributing production code and automation to the monolith, and serving as the GitHub Apps / ecosystem SME in engineering triage.</p>
         </div>
         <div class="timeline-item">
-            <div class="timeline-date">Previously</div>
+            <div class="timeline-date">01/2020 — 09/2022</div>
             <h3>IT Consultant — Kybeidos, Heidelberg</h3>
-            <p>Consulting on IT solutions, bridging technical expertise with client needs.</p>
+            <p>Led architecture and full implementation of a government-funded IoT platform. Built backend services and data pipelines (Python, Docker) and served as Scrum Team Lead.</p>
         </div>
         <div class="timeline-item">
-            <div class="timeline-date">Education</div>
+            <div class="timeline-date">2013 — 2019</div>
             <h3>B.Sc. & M.Sc. Physics — Heidelberg University</h3>
-            <p>Trained in analytical thinking and problem-solving at one of Germany's top research universities.</p>
+            <p>Trained in analytical thinking and systems problem-solving at one of Germany's top research universities.</p>
         </div>
     </div>
 </section>
@@ -555,18 +604,21 @@
     <h2>Technologies I Work With</h2>
     <p>The tools and technologies in my day-to-day.</p>
     <div class="toolkit">
-        <span class="toolkit-tag">Git</span>
+        <span class="toolkit-tag">Python</span>
+        <span class="toolkit-tag">Ruby / Rails</span>
+        <span class="toolkit-tag">ERB</span>
+        <span class="toolkit-tag">SQL</span>
+        <span class="toolkit-tag">GraphQL</span>
+        <span class="toolkit-tag">REST APIs</span>
+        <span class="toolkit-tag">Git & GitHub</span>
         <span class="toolkit-tag">GitHub Actions</span>
         <span class="toolkit-tag">GitHub Copilot</span>
-        <span class="toolkit-tag">REST APIs</span>
-        <span class="toolkit-tag">GraphQL</span>
-        <span class="toolkit-tag">JavaScript</span>
-        <span class="toolkit-tag">Python</span>
-        <span class="toolkit-tag">Bash</span>
         <span class="toolkit-tag">Docker</span>
+        <span class="toolkit-tag">Kubernetes</span>
         <span class="toolkit-tag">Linux</span>
-        <span class="toolkit-tag">VS Code</span>
-        <span class="toolkit-tag">Markdown</span>
+        <span class="toolkit-tag">GCP</span>
+        <span class="toolkit-tag">Accessibility (ARIA)</span>
+        <span class="toolkit-tag">Pandas</span>
     </div>
 </section>
 
@@ -587,14 +639,14 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--text)"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             <div>
                 <strong>LinkedIn</strong>
-                <span>Connect with me</span>
+                <span>in/timnitschai</span>
             </div>
         </a>
     </div>
 </section>
 
 <footer>
-    <p>Built with <span class="heart">♥</span> by Tim · © 2026</p>
+    <p>Built with <span class="heart">♥</span> by Tim Nitschai · © 2026</p>
 </footer>
 
 <script>
